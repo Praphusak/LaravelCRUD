@@ -8,9 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ assert('CSS/main.css') }}">
+    <link rel="stylesheet" href="{{ assert('css/main.css') }}">
 </head>
-<body>
+<body class="bg-dark">
     <div class="container mt-2">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -35,12 +35,12 @@
                 </tr>
                 @foreach($companies as $company)
                     <tr>
-                        <td class="text-center">{{ $company->id }}</td>
-                        <td class="text-center">{{ $company->name }}</td>
-                        <td class="text-center">{{ $company->email }}</td>
-                        <td class="text-center">{{ $company->address }}</td>
-                        <td>
-                            <form action="{{route('companies.destroy', $company->id)}}" method="POST" class="btn-group" role="group" aria-label="Basic example">
+                        <td class=" bg-light text-center ">{{ $company->id }}</td>
+                        <td class="bg-light text-center">{{ $company->name }}</td>
+                        <td class=" bg-light text-center">{{ $company->email }}</td>
+                        <td class=" bg-light text-center">{{ $company->address }}</td>
+                        <td class=" bg-light">
+                            <form action="{{route('companies.destroy', $company->id)}}" method="POST" class="bg-light btn-group" role="group" aria-label="Basic example">
                             <a href="{{route('companies.edit', $company->id)}}" class="btn btn-info"><i class="fa fa-refresh"></i>Edit</a>
                             @csrf
                             @method('DELETE')

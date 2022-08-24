@@ -7,12 +7,12 @@
     <title>Create Company</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<body>
+<body class="bg-info">
     
     <div class="container">
         <div class="row">
             <div class="col text-center">
-                <h2 class="text-info">Add Company</h2>
+                <h2 class="text-success">Add Company</h2>
                 <div >
                 <a href="{{route('companies.index')}}" class="btn btn-secondary">Back</a>
                 </div>
